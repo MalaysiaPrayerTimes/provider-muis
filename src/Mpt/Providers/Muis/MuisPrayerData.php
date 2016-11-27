@@ -32,7 +32,7 @@ class MuisPrayerData extends AbstractPrayerData
         $month = $this->getMonth();
         $month_day_count = date('t');
 
-        if (!file_exists($this->getFile()) ) {
+        if (!file_exists($this->getFile())) {
             throw new DataNotAvailableException("No data available for year $year.");
         }
 

@@ -11,7 +11,6 @@ use Mpt\Providers\Muis\MuisProvider;
 
 class MuisProviderTest extends \PHPUnit\Framework\TestCase
 {
-
     public function testInCountryCoordinates()
     {
         $geocoder = $this->getMockBuilder(Geocoder::class)
