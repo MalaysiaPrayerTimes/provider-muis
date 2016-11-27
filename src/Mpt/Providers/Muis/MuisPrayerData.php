@@ -127,7 +127,7 @@ class MuisPrayerData extends AbstractPrayerData
      */
     public function getLastModified()
     {
-        return new \DateTime(filemtime($this->getFile()));
+        return \DateTime::createFromFormat('U', filemtime($this->getFile()));
     }
 
     /**

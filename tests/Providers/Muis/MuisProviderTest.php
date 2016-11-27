@@ -77,6 +77,16 @@ class MuisProviderTest extends \PHPUnit\Framework\TestCase
             ->getTimes();
     }
 
+    public function testGetLastModified()
+    {
+        $mp = $this->getMuisProvider();
+
+        $mp->setMonth(11)
+            ->setYear(2016)
+            ->getTimesByCode('sgp-1')
+            ->getLastModified();
+    }
+
     private function getMuisProvider($geocoder = null)
     {
         if (is_null($geocoder)) {
