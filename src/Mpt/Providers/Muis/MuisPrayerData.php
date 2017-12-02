@@ -32,10 +32,6 @@ class MuisPrayerData extends AbstractPrayerData
         $month = $this->getMonth();
         $month_day_count = date('t');
 
-        if (!file_exists($this->getFile())) {
-            throw new DataNotAvailableException("No data available for year $year.");
-        }
-
         $handle = fopen($this->getFile(), 'r');
 
         if (!$handle) {
@@ -136,7 +132,14 @@ class MuisPrayerData extends AbstractPrayerData
     private function getFile()
     {
         $year = $this->getYear();
-        return __DIR__ . "/Resources/$year.csv";
+
+        $file = __DIR__ . "/Resources/$year.csv";
+
+        if (!file_exists($file)) {
+            throw new DataNotAvailableException("No data available for year $year.");
+        }
+
+        return $file;
     }
 
     /**

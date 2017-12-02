@@ -87,6 +87,18 @@ class MuisProviderTest extends \PHPUnit\Framework\TestCase
             ->getLastModified();
     }
 
+    public function testGetLastModifiedBadYear()
+    {
+        $mp = $this->getMuisProvider();
+
+        $this->expectException(DataNotAvailableException::class);
+
+        $mp->setMonth(11)
+            ->setYear(2013)
+            ->getTimesByCode('sgp-1')
+            ->getLastModified();
+    }
+
     private function getMuisProvider($geocoder = null)
     {
         if (is_null($geocoder)) {
