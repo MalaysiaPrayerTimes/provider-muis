@@ -11,6 +11,7 @@ class MuisPrayerData extends AbstractPrayerData
     private $sources = [
         '2016' => 'http://www.muis.gov.sg/documents/Resource_Centre/Prayer_Timetable_2016.pdf',
         '2017' => 'http://www.muis.gov.sg/documents/Resource_Centre/Prayer%20Timetable%202017.pdf',
+        '2018' => 'https://www.muis.gov.sg/documents/Prayer%20Timetable%202018.pdf',
     ];
 
     /**
