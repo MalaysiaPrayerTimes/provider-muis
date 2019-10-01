@@ -13,6 +13,7 @@ class MuisPrayerData extends AbstractPrayerData
         '2017' => 'http://www.muis.gov.sg/documents/Resource_Centre/Prayer%20Timetable%202017.pdf',
         '2018' => 'https://www.muis.gov.sg/documents/Prayer%20Timetable%202018.pdf',
         '2019' => 'https://www.muis.gov.sg/-/media/Files/Corporate-Site/Prayer-Timetable-2019.pdf',
+        '2020' => 'https://www.muis.gov.sg/-/media/Files/Corporate-Site/Prayer-Timetable-2020.pdf',
     ];
 
     /**
